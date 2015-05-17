@@ -1,0 +1,7 @@
+logstashforwarder:
+    build: .
+    volumes:
+        - config:/opt/logstash-forwarder/config
+        - certificates:/opt/logstash-forwarder/certs
+    external_links:
+        - elkstack_logstash_1:logstash
